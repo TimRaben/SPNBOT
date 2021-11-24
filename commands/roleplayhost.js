@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    message.delete();
+    message.channel.bulkDelete(2)
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(":x: **-** Sorry, jij kan geen Roleplay Hosten!");
 
@@ -33,8 +33,6 @@ module.exports.run = async (client, message, args) => {
         var channel = message.member.guild.channels.cache.get("866336992001130496");
  
         if (!channel) return;
-
-    channel.send(embed);
 
     var msg = await channel.send(embed)
 
