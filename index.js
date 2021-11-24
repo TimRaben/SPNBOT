@@ -38,17 +38,11 @@ client.on("ready", async () => {
 
     console.log(`${client.user.username} is herstart.`);
 
-    var test = "<:COVID:913049692529643530>";
-
-    var staff = "<:SPN_Staff:913050805123284992>";
-
-    var community = "<:SPN_Logo:913048554665279578>";
-
     setInterval(() => {
         const statuses = [
-            `${test} - Covid | spn/sneltest`,
-            `${community} - Community`,
-            `${staff} - Staffleden`,
+            `🧪 - Covid | spn/sneltest`,
+            `🌍 - Community`,
+            `⚡ - Staffleden`,
             `🎫 - Tickets`,
             `👥 - 1000 Leden`,
         ]
