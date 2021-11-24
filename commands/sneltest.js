@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
         "Negatief",
         "Negatief",
         "Negatief",
-        "Negatief",
+        "Positief",
         "Negatief",
         "Negatief",
         "Negatief",
@@ -22,76 +22,76 @@ module.exports.run = async (client, message, args) => {
         "Negatief",
         "Negatief",
         "Negatief",
-        "Negatief"
+        "Positief"
     ]
     let Response = responses[Math.floor(Math.random()*(responses.length)-1)]
 
     const embed2 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
-        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.n\n*Testuitslag Genereren: 0% (dit word echt bijgewerkt)*`)
+        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 0% (dit word echt bijgewerkt)*`)
         .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png")
         .setAuthor("GGD - Spijkenisse Roleplay", "https://www.cowerk.nl/wp-content/uploads/2021/07/ggd-logo-we.jpg")
         .setFooter("Spijkenisse Roleplay - Corona Test");
 
         const embed3 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
-        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.n\n*Testuitslag Genereren: 10%*`)
+        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 10%*`)
         .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png")
         .setAuthor("GGD - Spijkenisse Roleplay", "https://www.cowerk.nl/wp-content/uploads/2021/07/ggd-logo-we.jpg")
         .setFooter("Spijkenisse Roleplay - Corona Test");
 
         const embed4 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
-        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.n\n*Testuitslag Genereren: 20%*`)
+        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 20%*`)
         .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png")
         .setAuthor("GGD - Spijkenisse Roleplay", "https://www.cowerk.nl/wp-content/uploads/2021/07/ggd-logo-we.jpg")
         .setFooter("Spijkenisse Roleplay - Corona Test");
 
         const embed5 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
-        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.n\n*Testuitslag Genereren: 30%*`)
+        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 30%*`)
         .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png")
         .setAuthor("GGD - Spijkenisse Roleplay", "https://www.cowerk.nl/wp-content/uploads/2021/07/ggd-logo-we.jpg")
         .setFooter("Spijkenisse Roleplay - Corona Test");
 
         const embed7 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
-        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.n\n*Testuitslag Genereren: 40%*`)
+        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 40%*`)
         .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png")
         .setAuthor("GGD - Spijkenisse Roleplay", "https://www.cowerk.nl/wp-content/uploads/2021/07/ggd-logo-we.jpg")
         .setFooter("Spijkenisse Roleplay - Corona Test");
 
         const embed8 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
-        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.n\n*Testuitslag Genereren: 50%*`)
+        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 50%*`)
         .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png")
         .setAuthor("GGD - Spijkenisse Roleplay", "https://www.cowerk.nl/wp-content/uploads/2021/07/ggd-logo-we.jpg")
         .setFooter("Spijkenisse Roleplay - Corona Test");
         
         const embed9 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
-        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.n\n*Testuitslag Genereren: 60%*`)
+        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 60%*`)
         .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png")
         .setAuthor("GGD - Spijkenisse Roleplay", "https://www.cowerk.nl/wp-content/uploads/2021/07/ggd-logo-we.jpg")
         .setFooter("Spijkenisse Roleplay - Corona Test");
 
         const embed10 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
-        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.n\n*Testuitslag Genereren: 70%*`)
+        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 70%*`)
         .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png")
         .setAuthor("GGD - Spijkenisse Roleplay", "https://www.cowerk.nl/wp-content/uploads/2021/07/ggd-logo-we.jpg")
         .setFooter("Spijkenisse Roleplay - Corona Test");
 
         const embed11 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
-        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.n\n*Testuitslag Genereren: 80%*`)
+        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 80%*`)
         .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png")
         .setAuthor("GGD - Spijkenisse Roleplay", "https://www.cowerk.nl/wp-content/uploads/2021/07/ggd-logo-we.jpg")
         .setFooter("Spijkenisse Roleplay - Corona Test");
 
         const embed12 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
-        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.n\n*Testuitslag Genereren: 90%*`)
+        .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 90%*`)
         .setThumbnail("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png")
         .setAuthor("GGD - Spijkenisse Roleplay", "https://www.cowerk.nl/wp-content/uploads/2021/07/ggd-logo-we.jpg")
         .setFooter("Spijkenisse Roleplay - Corona Test");
