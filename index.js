@@ -50,7 +50,7 @@ client.on("ready", async () => {
             `${community} - Community`,
             `${staff} - Staffleden`,
             `🎫 - Tickets`,
-            `👥 - ${client.guild.memberCount} Leden`,
+            `👥 - 1000 Leden`,
         ]
     
         const status = statuses[Math.floor(Math.random() * statuses.length)]
