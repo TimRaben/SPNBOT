@@ -25,7 +25,6 @@ module.exports.run = async (client, message, args) => {
         "Negatief",
         "Positief",
     ]
-    
 
     let Response = responses[Math.floor(Math.random()*(responses.length)-1)]
 
