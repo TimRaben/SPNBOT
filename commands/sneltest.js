@@ -4,6 +4,7 @@ module.exports.run = async (client, message, args) => {
 
     var kanaal = message.member.guild.channels.cache.get("912709688573972560");
 
+    
     let responses = [
         "Positief",
         "Negatief",
@@ -24,7 +25,7 @@ module.exports.run = async (client, message, args) => {
         "Negatief",
         "Positief",
     ]
-    
+
     let Response = responses[Math.floor(Math.random()*(responses.length)-1)]
 
     const embed2 = new discord.MessageEmbed()
