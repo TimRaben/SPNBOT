@@ -330,6 +330,12 @@ module.exports.run = async (client, message, args) => {
 
             }, 60001);
 
+            setTimeout(() => {
+
+                settedParent.delete();
+
+            }, 80001);
+
 
 
                 });
