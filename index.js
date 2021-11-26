@@ -38,6 +38,14 @@ client.on("ready", async () => {
 
     console.log(`${client.user.username} is herstart.`);
 
+    var channel = '912779923700199474';
+
+    setInterval(() => {
+
+        channel.send('Wil jij je testen? Typ dan ``spn/sneltest``.')
+
+    }, 3600000);
+
 
     setInterval(() => {
         const statuses = [
