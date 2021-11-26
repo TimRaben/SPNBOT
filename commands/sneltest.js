@@ -150,35 +150,69 @@ module.exports.run = async (client, message, args) => {
         .setDescription("Heb je klachten? Zoals Hoofdpijn, Misselijkheid, Buikpijn enzovoort?")
         .setFooter("Corona Test - Spijkenisse Roleplay")
 
-    message.channel.send(embed1);
-    message.channel.send(vraag1);
-
-    message.channel.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
-        var antwoord1 = antwoord.first();;
-        message.channel.send(vraag2);
+        message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+            (createdChannel) => {
+                createdChannel.setParent(categoryID).then(
+                    (settedParent) => {
     
-    message.channel.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
-        var antwoord1 = antwoord.first();;
-        message.channel.send(vraag3);
+                        settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@everyone'), {
+                            SEND_MESSAGES: false,
+                            VIEW_CHANNEL: false
+                        });
+    
+                        settedParent.updateOverwrite(message.author.id, {
+                            CREATE_INSTANT_INVITE: false,
+                            READ_MESSAGES: true,
+                            VIEW_CHANNEL: true,
+                            SEND_MESSAGES: true,
+                            ATTACH_FILES: true,
+                            CONNECT: true,
+                            ADD_REACTIONS: true
+                        });
+    
 
-    message.channel.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
-        var antwoord1 = antwoord.first();;
-        message.channel.send(vraag4);
+    message.channel.send("Gelukt! Je bent momenteel aan het testen! Ga naar het kanaal waar je in getagged word.") 
+    settedParent.send(embed1);
+    settedParent.send(message.author);
+    settedParent.send(`${user}`);
+    settedParent.send(vraag1);
 
-    message.channel.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
+    settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
+        var antwoord1 = antwoord.first();;
+        settedParent.send(vraag2);
+    
+    settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
+        var antwoord1 = antwoord.first();;
+        settedParent.send(vraag3);
+
+    settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
+        var antwoord1 = antwoord.first();;
+        settedParent.send(vraag4);
+
+    settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
             var antwoord1 = antwoord.first();;
-        message.channel.send(vraag5);
+        settedParent.send(vraag5);
         
     message.channel.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
             var antwoord3 = antwoord.first();;
 
-            message.channel.bulkDelete(12)
+            settedParent.bulkDelete(12)
 
             setTimeout(() => {
 
-                message.channel.send(embed2);
+                settedParent.send(embed2);
 
             }, 750);
+
+            settedParent.updateOverwrite(message.author.id, {
+                CREATE_INSTANT_INVITE: false,
+                READ_MESSAGES: true,
+                VIEW_CHANNEL: true,
+                SEND_MESSAGES: false,
+                ATTACH_FILES: true,
+                CONNECT: true,
+                ADD_REACTIONS: true
+            });
 
             setTimeout(() => {
 
@@ -188,85 +222,85 @@ module.exports.run = async (client, message, args) => {
 
             setTimeout(() => {
 
-                message.channel.bulkDelete(1)
+                settedParent.bulkDelete(1)
 
             }, 6000);
 
             setTimeout(() => {
 
-                message.channel.send(embed3);
+                settedParent.send(embed3);
 
             }, 6000);
 
             setTimeout(() => {
 
-                message.channel.bulkDelete(1)
+                settedParent.bulkDelete(1)
 
             }, 12000);
 
             setTimeout(() => {
 
-                message.channel.send(embed4);
+                settedParent.send(embed4);
 
             }, 12000);
 
             setTimeout(() => {
 
-                message.channel.bulkDelete(1)
+                settedParent.bulkDelete(1)
 
             }, 18000);
 
             setTimeout(() => {
 
-                message.channel.send(embed5);
+                settedParent.send(embed5);
 
             }, 18000);
 
             setTimeout(() => {
 
-                message.channel.bulkDelete(1)
+                settedParent.bulkDelete(1)
 
             }, 24000);
 
             setTimeout(() => {
 
-                message.channel.send(embed7);
+                settedParent.send(embed7);
 
             }, 24000);
 
             setTimeout(() => {
 
-                message.channel.bulkDelete(1)
+                settedParent.bulkDelete(1)
 
             }, 30000);
 
             setTimeout(() => {
 
-                message.channel.send(embed8);
+                settedParent.send(embed8);
 
             }, 30000);
 
             setTimeout(() => {
 
-                message.channel.bulkDelete(1)
+                settedParent.bulkDelete(1)
 
             }, 36000);
 
             setTimeout(() => {
 
-                message.channel.send(embed9);
+                settedParent.send(embed9);
 
             }, 36000);
 
             setTimeout(() => {
 
-                message.channel.bulkDelete(1)
+                settedParent.bulkDelete(1)
 
             }, 42000);
 
             setTimeout(() => {
 
-                message.channel.send(embed10);
+                settedParent.send(embed10);
 
             }, 42000);
 
@@ -278,42 +312,45 @@ module.exports.run = async (client, message, args) => {
 
             setTimeout(() => {
 
-                message.channel.send(embed11);
+                settedParent.send(embed11);
 
             }, 48000);
 
             setTimeout(() => {
 
-                message.channel.bulkDelete(1)
+                settedParent.bulkDelete(1)
 
             }, 54000);
 
             setTimeout(() => {
 
-                message.channel.send(embed12);
+                settedParent.send(embed12);
 
             }, 54001);
 
             setTimeout(() => {
 
-                message.channel.bulkDelete(1)
+                settedParent.bulkDelete(1)
 
             }, 60001);
 
             setTimeout(() => {
 
-                message.channel.send(embed13);
+                settedParent.send(embed13);
 
             }, 60001);
 
 
 
-                });
+        });
 
-            })
-        }) 
     })
-        })
+})
+
+})
+}) 
+})
+})
 
 
 }
