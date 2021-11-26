@@ -6,8 +6,6 @@ module.exports.run = async (client, message, args) => {
 
     if (!args[0]) return message.channel.send(":x:  **|** Geef een geldige bug report op!")
 
-    var channel = '913838035379028048';
-
     message.channel.send(":white_check_mark: **|** Je hebt succesvol een Bug gerapporteerd!")
 
     setTimeout(() => {
@@ -23,8 +21,9 @@ module.exports.run = async (client, message, args) => {
         .setFooter("Spijkenisse Roleplay • Bug Report • Geraporteerd op:")
         .setTimestamp();
 
-    channel.send(embed);
+        var channel = message.guild.channels.cache.get("913838035379028048");
 
+        channel.send(embed);
 }
 
 module.exports.help = {
