@@ -196,7 +196,7 @@ module.exports.run = async (client, message, args) => {
                         settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
                                 var antwoord3 = antwoord.first();;
                         
-            message.channel.bulkDelete(12)
+            settedParent.bulkDelete(12)
 
             setTimeout(() => {
 
