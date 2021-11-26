@@ -2,6 +2,8 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
+    var categoryID = '913744041286438912';
+
     var kanaal = message.member.guild.channels.cache.get("912709688573972560");
 
     let responses = [
@@ -26,8 +28,6 @@ module.exports.run = async (client, message, args) => {
     ]
 
     let Response = responses[Math.floor(Math.random()*(responses.length)-1)]
-
-    var categoryID = '913744041286438912'
 
     const embed2 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
@@ -152,52 +152,51 @@ module.exports.run = async (client, message, args) => {
         .setDescription("Heb je klachten? Zoals Hoofdpijn, Misselijkheid, Buikpijn enzovoort?")
         .setFooter("Corona Test - Spijkenisse Roleplay")
 
-        message.guild.channels.create("ggd-sneltest", { type: 'text' }).then(
-            (createdChannel) => {
-                createdChannel.setParent(categoryID).then(
-                    (settedParent) => {
-    
-                        settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@everyone'), {
-                            SEND_MESSAGES: false,
-                            VIEW_CHANNEL: false
-                        });
-    
-                        settedParent.updateOverwrite(message.author.id, {
-                            CREATE_INSTANT_INVITE: false,
-                            READ_MESSAGES: true,
-                            VIEW_CHANNEL: true,
-                            SEND_MESSAGES: true,
-                            ATTACH_FILES: true,
-                            CONNECT: true,
-                            ADD_REACTIONS: true
-                        });
-    
 
-    message.channel.send("Gelukt! Je bent momenteel aan het testen! Ga naar het kanaal waar je in getagged word.") 
-    settedParent.send(embed1);
-    settedParent.send(message.author);
-    settedParent.send(vraag1);
+    message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+        (createdChannel) => {
+            createdChannel.setParent(categoryID).then(
+                (settedParent) => {
 
-    settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
-        var antwoord1 = antwoord.first();;
-        settedParent.send(vraag2);
-    
-    settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
-        var antwoord1 = antwoord.first();;
-        settedParent.send(vraag3);
+                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@everyone'), {
+                        SEND_MESSAGES: false,
+                        VIEW_CHANNEL: false
+                    });
 
-    settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
-        var antwoord1 = antwoord.first();;
-        settedParent.send(vraag4);
+                    settedParent.updateOverwrite(message.author.id, {
+                        CREATE_INSTANT_INVITE: false,
+                        READ_MESSAGES: true,
+                        VIEW_CHANNEL: true,
+                        SEND_MESSAGES: true,
+                        ATTACH_FILES: true,
+                        CONNECT: true,
+                        ADD_REACTIONS: true
+                    });
 
-    settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
-            var antwoord1 = antwoord.first();;
-        settedParent.send(vraag5);
-        
-    message.channel.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
-            var antwoord3 = antwoord.first();;
+                settedParent.send(`${message.author}`);
+                settedParent.send(embed1);
+                settedParent.send(vraag1);
 
-            settedParent.bulkDelete(12)
+                settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
+                        var antwoord1 = antwoord.first();;
+                        settedParent.send(vraag2);
+
+                        settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
+                            var antwoord2 = antwoord.first();;
+                            settedParent.send(vraag3);
+                    
+                        settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
+                            var antwoord2 = antwoord.first();;
+                            settedParent.send(vraag4);
+
+                        settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
+                            var antwoord2 = antwoord.first();;
+                            settedParent.send(vraag5);
+                        
+                        settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
+                                var antwoord3 = antwoord.first();;
+                        
+            message.channel.bulkDelete(12)
 
             setTimeout(() => {
 
@@ -297,7 +296,7 @@ module.exports.run = async (client, message, args) => {
 
             setTimeout(() => {
 
-                message.channel.bulkDelete(1)
+                settedParent.bulkDelete(1)
 
             }, 48000);
 
@@ -333,15 +332,15 @@ module.exports.run = async (client, message, args) => {
 
 
 
-        });
+                });
 
+            
+        })
     })
-})
-
-})
-}) 
-})
-})
+            })
+        }) 
+    })
+        })
 
 
 }
