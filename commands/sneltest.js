@@ -153,7 +153,7 @@ module.exports.run = async (client, message, args) => {
         .setFooter("Corona Test - Spijkenisse Roleplay")
 
 
-    message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+    message.guild.channels.create('ggd-sneltest', { type: 'text' }).then(
         (createdChannel) => {
             createdChannel.setParent(categoryID).then(
                 (settedParent) => {
