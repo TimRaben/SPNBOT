@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args) => {
         .setFooter("Spijkenisse Roleplay • Bug Report • Geraporteerd op:")
         .setTimestamp();
 
-    channel.send(embed)
+    channel.send(embed);
 
 }
 
