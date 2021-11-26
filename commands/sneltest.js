@@ -27,6 +27,8 @@ module.exports.run = async (client, message, args) => {
 
     let Response = responses[Math.floor(Math.random()*(responses.length)-1)]
 
+    var categoryID = '913744041286438912'
+
     const embed2 = new discord.MessageEmbed()
         .setTitle("Bedankt voor het invoeren van deze vragen!")
         .setDescription(`We zijn je Test aan het controleren, binnen 1 minuut is je uitslag bekend!\n\nJe uitslag komt te staan in ${message.member.guild.channels.cache.get('912709688573972560').toString()}.\n\n*Testuitslag Genereren: 0% (dit word echt bijgewerkt)*`)
