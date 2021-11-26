@@ -176,7 +176,6 @@ module.exports.run = async (client, message, args) => {
     message.channel.send("Gelukt! Je bent momenteel aan het testen! Ga naar het kanaal waar je in getagged word.") 
     settedParent.send(embed1);
     settedParent.send(message.author);
-    settedParent.send(`${user}`);
     settedParent.send(vraag1);
 
     settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
