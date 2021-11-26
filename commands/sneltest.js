@@ -205,16 +205,6 @@ module.exports.run = async (client, message, args) => {
 
             }, 750);
 
-            settedParent.updateOverwrite(message.author.id, {
-                CREATE_INSTANT_INVITE: false,
-                READ_MESSAGES: true,
-                VIEW_CHANNEL: true,
-                SEND_MESSAGES: false,
-                ATTACH_FILES: true,
-                CONNECT: true,
-                ADD_REACTIONS: true
-            });
-
             setTimeout(() => {
 
                 kanaal.send(uitslag);
