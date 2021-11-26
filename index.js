@@ -46,7 +46,6 @@ client.on("ready", async () => {
 
     }, 3600000);
 
-
     setInterval(() => {
         const statuses = [
             `🧪 - Covid | spn/sneltest`,
