@@ -38,6 +38,7 @@ client.on("ready", async () => {
 
     console.log(`${client.user.username} is herstart.`);
 
+
     setInterval(() => {
         const statuses = [
             `🧪 - Covid | spn/sneltest`,
@@ -51,7 +52,7 @@ client.on("ready", async () => {
         client.user.setActivity(status, { type: "WATCHING"}) // Can Be WATCHING, STREAMING, LISTENING
     }, 4500) // Second You Want to Change Status, This Cahnges Every 2 Seconds
 
-});               
+});     
 
 client.on("message", async message => {
 
