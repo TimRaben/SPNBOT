@@ -30,31 +30,31 @@ module.exports.run = async (client, message, args) => {
             .setLabel('Startpagina')
             .setEmoji('🧱')
             .setValue('option1')
-            .setDescription('Startpagina')
+            .setDescription('Startpagina');
 
         let option2 = new MessageMenuOption()
             .setLabel('Informatieve Commands')
             .setEmoji('📚')
             .setValue('option2')
-            .setDescription('Informatie Commands')
+            .setDescription('Informatie Commands');
 
         let option3 = new MessageMenuOption()
             .setLabel('Algemene Commands')
             .setEmoji('📋')
             .setValue('option3')
-            .setDescription('Algemene Commands')
+            .setDescription('Algemene Commands');
 
         let option4 = new MessageMenuOption()
             .setLabel('Economoie Commands')
             .setEmoji('💰')
             .setValue('option4')
-            .setDescription('Economoie Commands')
+            .setDescription('Economoie Commands');
 
         let option5 = new MessageMenuOption()
             .setLabel('Staff Commands')
             .setEmoji('🔨')
             .setValue('option5')
-            .setDescription('Staff Commands')
+            .setDescription('Staff Commands');
     
     let select = new MessageMenu()
         .setID('selector')
