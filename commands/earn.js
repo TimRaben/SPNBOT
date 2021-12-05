@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    return message.channel.send(`!add-money ${message.author} 500`)
+    return message.channel.send("/bal")
 }
 
 module.exports.help = {
