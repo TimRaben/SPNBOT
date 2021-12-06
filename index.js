@@ -57,16 +57,16 @@ client.on("ready", async () => {
 
     const youtubeEmoji = "✅";
 
-    const inwoner1Rol = guild.roles.find(role => role.name === "» 🏡 | Inwoner");
-    const inwoner2Rol = guild.roles.find(role => role.name === "➖➖➖Inwoner➖➖➖");
-    const giveawayRol = guild.roles.cache.find(role => role.name === "»  ☃️| Whitelisted");
-    const pollRol = guild.roles.cache.find(role => role.name === "➖➖➖Whitedlisted➖➖➖");
+    const inwoner1Rol = guild.roles(role => role.name === "» 🏡 | Inwoner");
+    const inwoner2Rol = guild.roles(role => role.name === "➖➖➖Inwoner➖➖➖");
+    const giveawayRol = guild.roles(role => role.name === "»  ☃️| Whitelisted");
+    const pollRol = guild.roles(role => role.name === "➖➖➖Whitedlisted➖➖➖");
 
     const embed = new discord.MessageEmbed()
         .setTitle("Spijkenisse Roleplay - Verificatie")
         .setDescription(`Zodra je hieronder op dit ✅ icoontje klikt ga je akkoord met de de Regels, zodra je dit doet wensen wij je heel veel succes op deze server!`)
         .setColor("ORANGE")
-        
+
             var embedMessage = channel.send(embed);
 
             embedMessage.react(youtubeEmoji);
