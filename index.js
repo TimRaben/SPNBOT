@@ -55,10 +55,10 @@ client.on("ready", async () => {
 
     const youtubeEmoji = "✅";
 
-    const inwoner1Rol = message.guild.roles.cache.find(role => role.name === "» 🏡 | Inwoner");
-    const inwoner2Rol = message.guild.roles.cache.find(role => role.name === "➖➖➖Inwoner➖➖➖");
-    const giveawayRol = message.guild.roles.cache.find(role => role.name === "»  ☃️| Whitelisted");
-    const pollRol = message.guild.roles.cache.find(role => role.name === "➖➖➖Whitedlisted➖➖➖");
+    const inwoner1Rol = client.guild.roles.cache.find(role => role.name === "» 🏡 | Inwoner");
+    const inwoner2Rol = client.guild.roles.cache.find(role => role.name === "➖➖➖Inwoner➖➖➖");
+    const giveawayRol = client.guild.roles.cache.find(role => role.name === "»  ☃️| Whitelisted");
+    const pollRol = client.guild.roles.cache.find(role => role.name === "➖➖➖Whitedlisted➖➖➖");
 
     const embed = new discord.MessageEmbed()
         .setTitle("Spijkenisse Roleplay - Verificatie")
@@ -77,15 +77,15 @@ client.on("ready", async () => {
     client.on("messageReactionAdd", async (reaction, user) => {
         if (user.bot) return;
 
-        if (reaction.message.channel.id == channel) {
+        if (reaction.client.channel.id == channel) {
             if (reaction.emoji.name == youtubeEmoji) {
-                await reaction.message.guild.members.cache.get(user.id).roles.add(inwoner2Rol);
+                await reaction.client.guild.members.cache.get(user.id).roles.add(inwoner2Rol);
             } else if (reaction.emoji.name == youtubeEmoji) {
-                await reaction.message.guild.members.cache.get(user.id).roles.add(inwoner1Rol);
+                await reaction.client.guild.members.cache.get(user.id).roles.add(inwoner1Rol);
             } else if (reaction.emoji.name == youtubeEmoji) {
-                await reaction.message.guild.members.cache.get(user.id).roles.add(giveawayRol);
+                await reaction.client.guild.members.cache.get(user.id).roles.add(giveawayRol);
             } else if (reaction.emoji.name == youtubeEmoji) {
-                await reaction.message.guild.members.cache.get(user.id).roles.add(pollRol);
+                await reaction.client.guild.members.cache.get(user.id).roles.add(pollRol);
             } 
         } else {
             return;
