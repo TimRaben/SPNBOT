@@ -53,6 +53,8 @@ client.on("ready", async () => {
 
     const channel = "914182141137522688";
 
+    const guild = "866238268277784586";
+
     const youtubeEmoji = "✅";
 
     const inwoner1Rol = guild.roles.cache.find(role => role.name === "» 🏡 | Inwoner");
