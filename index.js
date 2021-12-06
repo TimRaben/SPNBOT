@@ -73,8 +73,14 @@ client.on("ready", async () => {
         .setDescription(`Zodra je hieronder op dit ✅ icoontje klikt ga je akkoord met de de Regels, zodra je dit doet wensen wij je heel veel succes op deze server!`)
         .setColor("ORANGE")
 
-    var embedMessage = await message.channel.send(embed);
-    embedMessage.react(youtubeEmoji);
+        setTimeout(() => {
+
+            var embedMessage = await message.channel.send(embed);
+
+            embedMessage.react(youtubeEmoji);
+
+        }, 7500);
+    
 
     client.on("messageReactionAdd", async (reaction, user) => {
         if (user.bot) return;
