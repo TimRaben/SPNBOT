@@ -57,8 +57,8 @@ client.on("ready", async () => {
 
     const youtubeEmoji = "✅";
 
-    const inwoner1Rol = guild.roles.cache.find(role => role.name === "» 🏡 | Inwoner");
-    const inwoner2Rol = guild.roles.cache.find(role => role.name === "➖➖➖Inwoner➖➖➖");
+    const inwoner1Rol = guild.roles.find(role => role.name === "» 🏡 | Inwoner");
+    const inwoner2Rol = guild.roles.find(role => role.name === "➖➖➖Inwoner➖➖➖");
     const giveawayRol = guild.roles.cache.find(role => role.name === "»  ☃️| Whitelisted");
     const pollRol = guild.roles.cache.find(role => role.name === "➖➖➖Whitedlisted➖➖➖");
 
