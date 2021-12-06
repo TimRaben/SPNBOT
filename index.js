@@ -50,45 +50,6 @@ client.on("ready", async () => {
         const status = statuses[Math.floor(Math.random() * statuses.length)]
         client.user.setActivity(status, { type: "WATCHING"}) // Can Be WATCHING, STREAMING, LISTENING
     }, 4500) // Second You Want to Change Status, This Cahnges Every 2 Seconds
-
-    const channel = "914182141137522688";
-
-    const guild = "866238268277784586";
-
-    const youtubeEmoji = "✅";
-
-    const inwoner1Rol = guild.roles(role => role.name === "» 🏡 | Inwoner");
-    const inwoner2Rol = guild.roles(role => role.name === "➖➖➖Inwoner➖➖➖");
-    const giveawayRol = guild.roles(role => role.name === "»  ☃️| Whitelisted");
-    const pollRol = guild.roles(role => role.name === "➖➖➖Whitedlisted➖➖➖");
-
-    const embed = new discord.MessageEmbed()
-        .setTitle("Spijkenisse Roleplay - Verificatie")
-        .setDescription(`Zodra je hieronder op dit ✅ icoontje klikt ga je akkoord met de de Regels, zodra je dit doet wensen wij je heel veel succes op deze server!`)
-        .setColor("ORANGE")
-
-            var embedMessage = channel.send(embed);
-
-            embedMessage.react(youtubeEmoji);
-
-    client.on("messageReactionAdd", async (reaction, user) => {
-        if (user.bot) return;
-
-        if (reaction.client.channel.id == channel) {
-            if (reaction.emoji.name == youtubeEmoji) {
-                await reaction.client.guild.members.cache.get(user.id).roles.add(inwoner2Rol);
-            } else if (reaction.emoji.name == youtubeEmoji) {
-                await reaction.client.guild.members.cache.get(user.id).roles.add(inwoner1Rol);
-            } else if (reaction.emoji.name == youtubeEmoji) {
-                await reaction.client.guild.members.cache.get(user.id).roles.add(giveawayRol);
-            } else if (reaction.emoji.name == youtubeEmoji) {
-                await reaction.client.guild.members.cache.get(user.id).roles.add(pollRol);
-            } 
-        } else {
-            return;
-        }
-    });
-
 });     
 
 client.on("message", async message => {
