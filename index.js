@@ -66,15 +66,10 @@ client.on("ready", async () => {
         .setTitle("Spijkenisse Roleplay - Verificatie")
         .setDescription(`Zodra je hieronder op dit ✅ icoontje klikt ga je akkoord met de de Regels, zodra je dit doet wensen wij je heel veel succes op deze server!`)
         .setColor("ORANGE")
-
-        setTimeout(() => {
-
+        
             var embedMessage = channel.send(embed);
 
             embedMessage.react(youtubeEmoji);
-
-        }, 7500);
-    
 
     client.on("messageReactionAdd", async (reaction, user) => {
         if (user.bot) return;
