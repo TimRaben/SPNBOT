@@ -55,10 +55,10 @@ client.on("ready", async () => {
 
     const youtubeEmoji = "✅";
 
-    const inwoner1Rol = client.guild.roles.cache.find(role => role.name === "» 🏡 | Inwoner");
-    const inwoner2Rol = client.guild.roles.cache.find(role => role.name === "➖➖➖Inwoner➖➖➖");
-    const giveawayRol = client.guild.roles.cache.find(role => role.name === "»  ☃️| Whitelisted");
-    const pollRol = client.guild.roles.cache.find(role => role.name === "➖➖➖Whitedlisted➖➖➖");
+    const inwoner1Rol = channel.guild.roles.cache.find(role => role.name === "» 🏡 | Inwoner");
+    const inwoner2Rol = channel.guild.roles.cache.find(role => role.name === "➖➖➖Inwoner➖➖➖");
+    const giveawayRol = channel.guild.roles.cache.find(role => role.name === "»  ☃️| Whitelisted");
+    const pollRol = channel.guild.roles.cache.find(role => role.name === "➖➖➖Whitedlisted➖➖➖");
 
     const embed = new discord.MessageEmbed()
         .setTitle("Spijkenisse Roleplay - Verificatie")
