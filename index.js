@@ -67,7 +67,7 @@ client.on("ready", async () => {
 
         setTimeout(() => {
 
-            var embedMessage = await message.channel.send(embed);
+            var embedMessage = message.channel.send(embed);
 
             embedMessage.react(youtubeEmoji);
 
