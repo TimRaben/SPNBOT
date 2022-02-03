@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     var kanaal = message.member.guild.channels.cache.get("938757493516042290");
 
     let responses = [
-        "**Gelukt**, je kan nu naar binnen gaan en je inbraak doorzetten.",
+        "**Gelukt**, je kan nu naar binnen gaan en je inbraak doorzetten."
         "**Niet Gelukt**, je bent gefaald, probeer het een andere keer opnieuw, ga snel weg voordat de Politie er is.",
     ]
 
