@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 
     let responses = [
         "**Gelukt**, je kan nu naar binnen gaan en je inbraak doorzetten.",
-        "**Niet Gelukt**, je bent gefaald, probeer het een andere keer opnieuw, ga snel weg voordat de Politie er is."
+        "**Niet Gelukt**, je bent gefaald, probeer het een andere keer opnieuw, ga snel weg voordat de Politie er is.",
     ]
 
     let Response = responses[Math.floor(Math.random()*(responses.length)-1)]
@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
         .setDescription(`De Inbraak is ${Response}`)
 
 
-        kanaal.send(embed2, "<@&866336898400911361>");
+        kanaal.send("<@&866336898400911361>", embed2);
 
     message.channel.send(embed3)
 
