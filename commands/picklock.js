@@ -19,7 +19,9 @@ module.exports.run = async (client, message, args) => {
     .setFooter("Spijkenisse Roleplay - Inbraak");
 
 
-        kanaal.send(embed2);
+        kanaal.send(embed2, "<@&866336898400911361>");
+
+
 
         message.channel.send(embed3)
 
