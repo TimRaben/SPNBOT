@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 
     if (!args[0]) return message.reply("⛔ **|** Geef geen geldige persoon op.");
 
-    var user = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    var user = message.guild.member(message.mentions.users.first());
 
     user.send(`${args.slice(1).join(" ")}`)
 
