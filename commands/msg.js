@@ -6,6 +6,8 @@ module.exports.run = async (client, message, args) => {
 
     user.send(`${args.slice(1).join(" ")}`)
 
+    message.channel.send(`Je hebt succesvol een Prive bericht gestuurd naar ${args[0]}\n\nInhoud Bericht:\n${args.slice(1).join(" ")}`)
+
 }
 
 module.exports.help = {
