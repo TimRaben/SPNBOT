@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
         .setThumbnail("https://media.discordapp.net/attachments/838112437239939133/918131398991315074/unknown.png?width=679&height=678")
         .setFooter('Spijkenisse Roleplay - Netwerk')
 
-    user.send(`${args.slice(1).join(" ")}`)
+    user.send(embedParent)
 
     message.channel.send(`Je hebt succesvol een Embed Prive bericht gestuurd naar ${args[0]}\n\nInhoud Bericht:\n${args.slice(1).join(" ")}`)
 
