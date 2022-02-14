@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
         .setDescription(`${args.slice(1).join(" ")}`)
         .setAuthor("https://media.discordapp.net/attachments/838112437239939133/918131398991315074/unknown.png?width=679&height=678", "Spijkenisse Netwerk")
         .setThumbnail("https://media.discordapp.net/attachments/838112437239939133/918131398991315074/unknown.png?width=679&height=678")
-        .setFooter('Spijkenisse Roleplay - Netwerk')
+        .setFooter('Spijkenisse Roleplay - Netwerk');
 
     var user = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
